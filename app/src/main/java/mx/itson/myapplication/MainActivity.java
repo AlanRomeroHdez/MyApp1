@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
 
         (findViewById(R.id.btnAceptar)).setOnClickListener(this);
 
-
     }
 
     @Override
