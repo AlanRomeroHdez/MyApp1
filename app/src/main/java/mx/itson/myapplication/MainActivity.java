@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onClick(View view){
         String nombre = ((TextView)findViewById(R.id.txtNombre)).getText().toString();
-        Toast.makeText(getApplicationContext(), "Hola " + nombre + "Bienvenido a android", Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(), getString(R.string.texto_resultado).replace("{nombre}" , nombre), Toast.LENGTH_LONG).show();
     }
 
 }
